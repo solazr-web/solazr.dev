@@ -1,0 +1,159 @@
+:root {
+	--base: #000000;
+	--text: #e0e0e0;
+	--accent: #00bcd4;
+	--dim-text: #999999;
+	--surface0: #111111;
+	--border: #222222;
+	--hover: #ffffff;
+	--crust: #000000;
+}
+
+:root,
+code {
+	font-family: "JetBrains Mono", "Hack", monospace;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+:root {
+	scrollbar-width: none;
+	background-color: var(--base);
+	color: var(--text);
+	accent-color: var(--accent);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--base);
+	color: var(--text);
+}
+
+main {
+	padding: 1.5em;
+	background-color: var(--base);
+}
+
+h1, h2, legend {
+	color: var(--accent);
+	margin-bottom: 0.5em;
+}
+
+body > main > h1:first-child {
+	margin-top: 0;
+}
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--hover);
+}
+a:active {
+	color: var(--hover);
+}
+a:visited {
+	color: var(--dim-text);
+}
+
+progress {
+	width: 100%;
+	border: 1px solid var(--border);
+	background-color: var(--base);
+	color: var(--accent);
+	accent-color: var(--accent);
+}
+::-moz-progress-bar,
+::-webkit-progress-value {
+	background-color: var(--accent) !important;
+}
+::-webkit-progress-bar {
+	background-color: var(--base);
+	width: 100%;
+}
+
+fieldset {
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	padding: 1em;
+}
+legend {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+footer {
+	text-align: end;
+	font-size: small;
+	opacity: 60%;
+	color: var(--dim-text);
+}
+
+code {
+	padding: 0.15em 0.3em;
+	background-color: var(--surface0);
+	color: var(--accent);
+	border-radius: 4px;
+}
+pre > code {
+	display: block;
+	border: 1px solid var(--border);
+	padding: 1.25em 1.5em;
+	background-color: var(--surface0);
+	color: var(--text);
+}
+
+summary:hover,
+summary:active,
+details[open] > summary {
+	color: var(--accent);
+	font-weight: bold;
+}
+
+summary::after {
+	content: " (click to expand)";
+	opacity: 50%;
+	font-size: smaller;
+	color: var(--dim-text);
+}
+details[open] > summary::after {
+	content: " (click to collapse)";
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+td:first-child {
+	font-weight: bold;
+	color: var(--accent);
+	padding-right: 0.5em;
+}
+td {
+	padding: 0.3em 0;
+	word-break: break-all;
+}
+
+div.buttons > a {
+	font-size: 0;
+}
+div.buttons > a > img {
+	image-rendering: pixelated;
+	object-fit: contain;
+	width: 88px;
+	height: 31px;
+	filter: brightness(100%);
+	transition: filter 0.2s ease, transform 0.2s ease;
+}
+div.buttons > a > img:hover {
+	filter: brightness(150%);
+	transform: scale(1.05);
+}
+
+@media (min-width: 956px) {
+	body {
+		background: radial-gradient(circle at top center, #000000 60%, #0a0a0a 100%);
+	}
+}
